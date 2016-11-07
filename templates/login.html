@@ -5,56 +5,53 @@
   <title>Projet</title>
   
   
-   <!--
+  
 
       
 	  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css') }}">
 	  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='animate.css') }}">
-	
+	  
+	 
     
     
     
-   
+    <!--
     
         <link rel= "stylesheet" type= "text/css" href= "/static/styles.css">
 	  <link rel= "stylesheet" type= "text/css" href= "/static/animate.css">
     <link rel= "stylesheet" type= "text/scss" href= "/static/styles.scss">
-	  -->
 	  
-    <style>
-        #main
-        {
-            max-width:1920px;
-            margin-left:auto;
-            margin-right:auto;
-        }
-        img{
-            padding:40px
-        }
-    </style>
+	  -->
     
-   
+    
+    <script>
+    $('#toggle').click(function() {
+       $(this).toggleClass('active');
+       $('#overlay').toggleClass('open');
+      });
+    </script>
     
 </head>
 
 <body>
-  
-    <div id="main" style="border:0px solid green;margin-left:40px;margin-right:40px;">
-        
-        <img src="https://writeitdown31days.files.wordpress.com/2015/12/hello-picture.gif" style="width:100%;height:auto;"/>
-        <br>
-        <br>
-        <img src="http://www.publicdomainpictures.net/pictures/80000/velka/hello-clip-art-text.jpg" style="width:100%;height:auto;"/>
-        <br>
-        <br>
-        <img src="https://i.ytimg.com/vi/e6Tfq1hfkP0/maxresdefault.jpg" style="width:100%;height:auto;"/>
-        <br>
-        <br>
-        <img src="https://cdn.shopify.com/s/files/1/0015/2602/files/HA2016HEAD.png?11882814070312405412" style="width:100%;height:auto;"/>
-        
-    </div>
     
-  
+    
+  <div class="container" style="border:3px solid blue;">
+     <h1>Please login</h1>
+      <br>
+      <form action="" method="post">
+        <input type="text" placeholder="Username" name="username" value="{{
+          request.form.username }}">
+          <br><br>
+         <input type="password" placeholder="Password" name="password" value="{{
+          request.form.password }}">
+          <br><br>
+        <input class="btn btn-default" type="submit" value="Login">
+      </form>
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+  </div>
 
     
     
@@ -69,11 +66,12 @@
   <span class="middle"></span>
   <span class="bottom"></span>
 </div>
+-->
 
 <div class="overlay" id="overlay">
   <nav class="overlay-menu">
     <ul>
-      <li ><a href="/">routeOne</a></li>
+       <li ><a href="/">routeOne</a></li>
       <li><a href="/route2">routeTwo</a></li>
       <li><a href="/route3">routeThree</a></li>
       <li><a href="/route4">routeFour</a></li>
@@ -81,18 +79,15 @@
   </nav>
 </div>
   
-
+<!--
     <script type="text/javascript" src="/static/wow.min.js"></script>
 	  <script type="text/javascript" src="/static/jquery.min.js"></script>
 	  
 	  <script type="text/javascript" src="/static/index.js"></script>  
-
-    
-      
-	  <script type="text/javascript" src="{{ url_for('static', filename='wow.min.js') }}"></script>
+-->
+     <script type="text/javascript" src="{{ url_for('static', filename='wow.min.js') }}"></script>
 	  <script type="text/javascript" src="{{ url_for('static', filename='jquery.min.js') }}"></script>
 	  
 	  <script type="text/javascript" src="{{ url_for('static', filename='index.js') }}"></script> 
--->
 </body>
 </html>

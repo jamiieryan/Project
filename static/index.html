@@ -27,21 +27,32 @@
 	  
     
     
-    <script>
-    $('#toggle').click(function() {
-       $(this).toggleClass('active');
-       $('#overlay').toggleClass('open');
-      });
-    </script>
+    
     
 </head>
 
-<body>
-    
-    
-  <div class="container">
+<body style="">
+  
+  <div id="pre" style="border-bottom:1px solid black;height:85vh;">
     <h1>INDEX</h1>
+    <div style="text-align:center;">
+      <button id="anchor">
+        click me  
+      </button>
+    </div>
   </div>
+  
+  <div id="main" style="border:0px solid black;">
+    <h1>INDEX</h1>
+    <div style="text-align:center;">
+      <button id="anchor">
+        click me  
+      </button>
+    </div>
+  </div>
+    
+    
+
 
     
     
@@ -60,7 +71,7 @@
 <div class="overlay" id="overlay">
   <nav class="overlay-menu">
     <ul>
-       <li ><a href="/">routeOne</a></li>
+       <li ><a href="/index">Index</a></li>
       <li><a href="/route2" action="/route2">routeTwo</a></li>
       <li><a href="/route3">routeThree</a></li>
       <li><a href="/route4">routeFour</a></li>
