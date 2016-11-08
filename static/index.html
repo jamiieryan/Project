@@ -17,39 +17,172 @@
 	  <script type="text/javascript" src="{{ url_for('static', filename='index.js') }}"></script> 
     
     -->
-    
-    
-    
-        <link rel= "stylesheet" type= "text/css" href= "/static/styles.css">
-	  <link rel= "stylesheet" type= "text/css" href= "/static/animate.css">
+    <!-- Fullscreen Menu CSS Resources-->
+    <link rel= "stylesheet" type= "text/css" href= "/static/styles.css">
+    <link rel= "stylesheet" type= "text/css" href= "/static/animate.css">
     <link rel= "stylesheet" type= "text/scss" href= "/static/styles.scss">
-	  
-	  
+
     
+    <!-- Fullpage.js Horizontal Slider Resources-->
+    <link rel="stylesheet" type="text/css" href="/static/jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="/static/examples.css" />
+    
+    <style>
+  
+        
+        body::-webkit-scrollbar { 
+            display:none; 
+            overflow-x:;
+           
+        }
+        
+        #main::-webkit-scrollbar
+        {
+            display:none; 
+            overflow-x:hidden;
+            max-width:1920px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        
+        #mainTwo::-webkit-scrollbar
+        {
+            display:none; 
+            overflow-x:hidden;
+            max-width:1920px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+       
+		/* Sections
+		 * --------------------------------------- */
+		#section0 img,
+		#section1 img{
+			margin: 20px 0 0 0;
+		}
+		#section2 img{
+			margin: 20px 0 0 52px;
+		}
+		#section3 img{
+			bottom: 0px;
+			position: absolute;
+			margin-left: -420px;
+		}
+		.intro p{
+			width: 50%;
+			margin: 0 auto;
+			font-size: 1.5em;
+		}
+		.twitter-share-button{
+			position: absolute;
+			z-index: 99;
+			right: 149px;
+			top: 9px;
+		}
+        scroll
+
+	</style>
+    
+    
+<script type="text/javascript" src="/static/jquery.min.js"></script>
+<script type="text/javascript" src="/static/jquery-ui.min.js"></script>
+    
+<script type="text/javascript" src="/static/jquery.fullPage.js"></script>
+<script type="text/javascript" src="/static/examples.js"></script>
+<script type="text/javascript">
+        $(document).ready(function() {
+        $('#fullpage').fullpage({
+            sectionsColor: ['#ffaa00'],
+             anchors: ['start-info'],
+            menu: '#menu',
+            scrollingSpeed: 1000
+        });
+
+    });
+</script>       
+    
+   
     
     
     
 </head>
 
-<body style="">
-  
-  <div id="pre" style="border-bottom:1px solid black;height:85vh;">
-    <h1>INDEX</h1>
+<body style="border:40px solid white;background:#000000;">
+	
+<div id="hide">
+    <div id="fullpage"style="border-bottom:40px solid white;">
+		
+		<div class="section active" id="section1" style="border-bottom:40px solid white;">
+			<div class="slide" >
+                 <div id="pre" style="">
+                    <h1>route two</h1>
+                    <div style="text-align:center;">
+                      <button id="anchor">
+                        click me  
+                      </button>
+                    </div>
+                  </div>
+                <!--
+				<div class="intro">
+					<h1>Create Sliders</h1>
+					<p>Not only vertical scrolling but also horizontal scrolling. With fullPage.js you will be able to add horizontal sliders in the most simple way ever.</p>
+					
+				</div>
+                -->
+			</div>
+			<div class="slide">
+				<div class="intro">
+				
+                    <div id="pre" style="border-bottom:2px solid red;">
+                    <h1>route three</h1>
+                    <div style="text-align:center;">
+                      <button id="anchor2">
+                        click me  
+                      </button>
+                    </div>
+                  </div>
+                  
+				</div>
+			</div>
+			<div class="slide">
+				<div class="intro">
+				
+					<h1>Cool</h1>
+					<p>It just looks cool. Impress everybody with a simple and modern web design!</p>
+				</div>
+			</div>
+			<div class="slide">
+				<div class="intro">
+					
+					<h1>Compatible</h1>
+					<p>Working in modern and old browsers too! IE 8 users don't have the fault of using that horrible browser! Lets give them a chance to see your site in a proper way!</p>
+				</div>
+			</div>
+		</div>
+        
+	</div>
+ </div>   
+   
+    
+    
+    
+     <!--
+  <div id="pre" style="border-bottom:2px solid red;height:85vh;">
+   
+      <h1>INDEX</h1>
     <div style="text-align:center;">
       <button id="anchor">
         click me  
       </button>
     </div>
-  </div>
+  </div>-->
   
-  <div id="main" style="border:0px solid black;">
-    <h1>INDEX</h1>
-    <div style="text-align:center;">
-      <button id="anchor">
-        click me  
-      </button>
+    <div id="main" style="border:0px solid black;overflow-y: scroll; height:100%;background:#00ffaa;">
+
     </div>
-  </div>
+    
+    
+  
     
     
 
@@ -78,12 +211,15 @@
     </ul>
   </nav>
 </div>
-  
+    
+ 	
 
     <script type="text/javascript" src="/static/wow.min.js"></script>
-	  <script type="text/javascript" src="/static/jquery.min.js"></script>
+	  
 	  
 	  <script type="text/javascript" src="/static/index.js"></script>  
-
+        
+   
+  
 </body>
 </html>

@@ -5,38 +5,57 @@
   <title>Projet</title>
   
   
-  <!--
+   <!--
 
       
 	  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css') }}">
 	  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='animate.css') }}">
-	  
-	  <script type="text/javascript" src="{{ url_for('static', filename='wow.min.js') }}"></script>
-	  <script type="text/javascript" src="{{ url_for('static', filename='jquery.min.js') }}"></script>
-	  
-	  <script type="text/javascript" src="{{ url_for('static', filename='index.js') }}"></script> 
-    
-    -->
+	
     
     
+    
+   
     
         <link rel= "stylesheet" type= "text/css" href= "/static/styles.css">
 	  <link rel= "stylesheet" type= "text/css" href= "/static/animate.css">
     <link rel= "stylesheet" type= "text/scss" href= "/static/styles.scss">
+	  -->
 	  
-	  
+    <style>
+        
+        #main
+        {
+            max-width:1920px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        img{
+           
+        }
+    </style>
     
-    
-
+   
     
 </head>
 
 <body>
+  
+    <div id="main" style="border:1px solid green;">
+        
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/6/63/IMG_(business).svg/1280px-IMG_(business).svg.png" style="width:100%;height:auto;"/>
+        <br>
+        <br>
+        <img src="http://www.publicdomainpictures.net/pictures/80000/velka/hello-clip-art-text.jpg" style="width:100%;height:auto;"/>
+        <br>
+        <br>
+        <img src="https://i.ytimg.com/vi/e6Tfq1hfkP0/maxresdefault.jpg" style="width:100%;height:auto;"/>
+        <br>
+        <br>
+        <img src="https://cdn.shopify.com/s/files/1/0015/2602/files/HA2016HEAD.png?11882814070312405412" style="width:100%;height:auto;"/>
+        
+    </div>
     
-    
-  <div class="container">
-     <h1>ROUTE 3</h1>
-  </div>
+  
 
     
     
@@ -45,7 +64,7 @@
     
     
     
-    
+ <!--   
 <div id="toggle" class="button_container">
   <span class="top"></span>
   <span class="middle"></span>
@@ -69,5 +88,12 @@
 	  
 	  <script type="text/javascript" src="/static/index.js"></script>  
 
+    
+      
+	  <script type="text/javascript" src="{{ url_for('static', filename='wow.min.js') }}"></script>
+	  <script type="text/javascript" src="{{ url_for('static', filename='jquery.min.js') }}"></script>
+	  
+	  <script type="text/javascript" src="{{ url_for('static', filename='index.js') }}"></script> 
+-->
 </body>
 </html>

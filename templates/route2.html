@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Projet</title>
   
-  
+      <script type="text/javascript" src="{{ url_for('static', filename='jquery.min.js') }}"></script>
    <!--
 
       
@@ -22,16 +22,31 @@
 	  -->
 	  
     <style>
+        
         #main
         {
-            max-width:1920px;
-            margin-left:auto;
-            margin-right:auto;
+            max-width:100%;
+            text-align:center;
         }
+        
         img{
-            padding:40px
+            max-width:1920px;
+            padding-bottom:20px;
+            
         }
+        
+       
     </style>
+    
+    <script type="text/javascript">
+        
+        $(document).ready(function () {
+            $("#fadeOnLoad").hide().fadeIn(3000);
+        });
+        
+        
+    
+    </script>
     
    
     
@@ -39,18 +54,18 @@
 
 <body>
   
-    <div id="main" style="border:0px solid green;margin-left:40px;margin-right:40px;">
+    <div id="main" style="border:0px solid green;">
         
-        <img src="https://writeitdown31days.files.wordpress.com/2015/12/hello-picture.gif" style="width:100%;height:auto;"/>
+        <img class="fadeInBlock" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2000px-Google_2015_logo.svg.png" style="width:100%;height:auto;"/>
         <br>
         <br>
-        <img src="http://www.publicdomainpictures.net/pictures/80000/velka/hello-clip-art-text.jpg" style="width:100%;height:auto;"/>
+        <img class="fadeInBlock" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2000px-Google_2015_logo.svg.png" style="width:100%;height:auto;"/>
         <br>
         <br>
-        <img src="https://i.ytimg.com/vi/e6Tfq1hfkP0/maxresdefault.jpg" style="width:100%;height:auto;"/>
+        <img class="fadeInBlock" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2000px-Google_2015_logo.svg.png" style="width:100%;height:auto;"/>
         <br>
         <br>
-        <img src="https://cdn.shopify.com/s/files/1/0015/2602/files/HA2016HEAD.png?11882814070312405412" style="width:100%;height:auto;"/>
+        <img class="fadeInBlock" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2000px-Google_2015_logo.svg.png" style="width:100%;height:auto;"/>
         
     </div>
     
@@ -94,5 +109,6 @@
 	  
 	  <script type="text/javascript" src="{{ url_for('static', filename='index.js') }}"></script> 
 -->
+
 </body>
 </html>
