@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Projet</title>
+  
+  
+  
+
+      
+	  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css') }}">
+	  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='animate.css') }}">
+	  
+	 
+        <script src="../static/js/jquery-1.11.2.js"></script>
+    <script src="../static/js/signIn.js"></script>
+    
+    
+    <!--
+    
+        <link rel= "stylesheet" type= "text/css" href= "/static/styles.css">
+	  <link rel= "stylesheet" type= "text/css" href= "/static/animate.css">
+    <link rel= "stylesheet" type= "text/scss" href= "/static/styles.scss">
+	  
+	  -->
+    
+   
+    
+</head>
+
+<body>
+    
+    
+  <div class="container" style="border:3px solid blue;">
+     <h1>Please Sign In</h1>
+     
+            
+          <br><br><br><br>
+            
+    <form class="form-signin" action="/validateLogin" method="post">
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" name="inputEmail" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <br><br>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Password" required>
+        <br>
+        <button id="btnSignIn" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    </form>
+  </div>
+
+    
+    
+      
+    
+    
+    
+    
+ <!--   
+<div id="toggle" class="button_container">
+  <span class="top"></span>
+  <span class="middle"></span>
+  <span class="bottom"></span>
+</div>
+-->
+
+<div class="overlay" id="overlay">
+  <nav class="overlay-menu">
+    <ul>
+       <li ><a href="/">routeOne</a></li>
+      <li><a href="/route2">routeTwo</a></li>
+      <li><a href="/route3">routeThree</a></li>
+      <li><a href="/route4">routeFour</a></li>
+    </ul>
+  </nav>
+</div>
+  
+<!--
+    <script type="text/javascript" src="/static/wow.min.js"></script>
+	  <script type="text/javascript" src="/static/jquery.min.js"></script>
+	  
+	  <script type="text/javascript" src="/static/index.js"></script>  
+-->
+     <script type="text/javascript" src="{{ url_for('static', filename='wow.min.js') }}"></script>
+	  <script type="text/javascript" src="{{ url_for('static', filename='jquery.min.js') }}"></script>
+	  
+	  <script type="text/javascript" src="{{ url_for('static', filename='index.js') }}"></script> 
+</body>
+</html>

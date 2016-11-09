@@ -21,7 +21,7 @@
     <link rel= "stylesheet" type= "text/css" href= "/static/styles.css">
     <link rel= "stylesheet" type= "text/css" href= "/static/animate.css">
     <link rel= "stylesheet" type= "text/scss" href= "/static/styles.scss">
-
+<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Fullpage.js Horizontal Slider Resources-->
     <link rel="stylesheet" type="text/css" href="/static/jquery.fullPage.css" />
@@ -79,8 +79,204 @@
 			right: 149px;
 			top: 9px;
 		}
-        scroll
+        .slider-img{
+            
+            max-width:1620px;
+            width:80%;
+            max-height:auto;
+            margin-left:auto;
+            margin-right:auto;
+            position: relative; top: 0; left: 0;
+            
+        }
+        .slider-info{
+            
+            background:#ffffff;
+            border:0px solid white;
+            width:100%;
+            height:350px;
+            max-height: auto;
+            max-width:500px;
+            margin-top:-12%;
+            margin-left:70%;
+            position: absolute;
+            
+           
+        }
+        #pre{
+            position: relative; 
+            left: 0; 
+            top: 0;
+            margin-top:-5%;
+            border:0px solid red;
+            max-width: 1920px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+     
+        button{
+            
+            border:2px solid black;
+            background: transparent;
+            font-family: 'Agency FB';
+            font-size:14pt;
+        }
+        
+        button:hover{
+            
+            border:2px solid black;
+            background: black;
+            color:#ffffff;
+            font-family: 'Agency FB';
+            font-size:14pt;
+        }
+        
+        
+    ///////////////////////////* Large Devices, Wide Screens */////////////////////////////////////////////////
+   
+        
+        
+    @media only screen and (max-width : 1920px) {
+        
+        .slider-img{
+            
+            max-width:1620px;
+            width:80%;
+            max-height:auto;
+            margin-left:auto;
+            margin-right:auto;
+            position: relative; top: 0; left: 0;
+            
+        }
+        .slider-info{
+            
+            background:#ffffff;
+            border:0px solid white;
+            width:100%;
+            height:350px;
+            max-height: auto;
+            max-width:500px;
+            margin-top:-12%;
+            margin-left:67%;
+            position: absolute;
+            
+           
+        }
+        #pre{
+            position: relative; 
+            left: 0; 
+            top: 0;
+            margin-top:-5%;
+            border:0px solid red;
+            max-width: 1920px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }  
+        
+    @media only screen and (max-width : 1820px) {
+        
+        .slider-img{
+            
+            max-width:1620px;
+            width:80%;
+            max-height:auto;
+            margin-left:auto;
+            margin-right:auto;
+            position: relative; top: 0; left: 0;
+            
+        }
+        .slider-info{
+            
+            background:#ffffff;
+            border:0px solid white;
+            width:100%;
+            height:300px;
+            max-height: auto;
+            max-width:750px;
+            margin-top:-5%;
+             margin-left:auto;
+            margin-right: auto;
+            position: relative;
+            
+           
+        }
+        #pre{
+            position: relative; 
+            left: 0; 
+            top: 0;
+            margin-top:-5%;
+            border:0px solid red;
+            max-width: 1920px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    } 
+        
+    ////////////////////////////////////////* medium Devices, Wide Screens *///////////////////////////////////////////
+    @media only screen and (max-width : 1200px) {
+        .slider-img{
+            
+            max-width:1620px;
+            width:80%;
+            max-height:auto;
+            margin-left:auto;
+            margin-right:auto;
+            position: relative; top: 0; left: 0;
+            
+        }
+        .slider-info{
+            
+            background:#ffffff;
+            border:0px solid white;
+            width:100%;
+            height:350px;
+            max-height: auto;
+            max-width:500px;
+            margin-top:-12%;
+            margin-left:auto;
+            margin-right: auto;
+            position: relative;
+            
+           
+        }
+        #pre{
+            position: relative; 
+            left: 0; 
+            top: 0;
+            margin-top:-5%;
+            border:0px solid red;
+            max-width: 1920px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
 
+    /* Medium Devices, Desktops */
+    @media only screen and (max-width : 992px) {
+
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (max-width : 768px) {
+
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (max-width : 480px) {
+
+    }
+
+    /* Custom, iPhone Retina */ 
+    @media only screen and (max-width : 320px) {
+        
+    }
+        
+        
+        
+        
+        
+        
 	</style>
     
     
@@ -92,7 +288,7 @@
 <script type="text/javascript">
         $(document).ready(function() {
         $('#fullpage').fullpage({
-            sectionsColor: ['#ffaa00'],
+            sectionsColor: ['#595959'],
              anchors: ['start-info'],
             menu: '#menu',
             scrollingSpeed: 1000
@@ -107,19 +303,30 @@
     
 </head>
 
-<body style="border:40px solid white;background:#000000;">
+<body style="border:0px solid white;background:#000000;">
 	
 <div id="hide">
-    <div id="fullpage"style="border-bottom:40px solid white;">
+    <div id="fullpage"style="border-bottom:0px solid white;">
 		
-		<div class="section active" id="section1" style="border-bottom:40px solid white;">
+		<div class="section active" id="section1" style="border-bottom:0px solid white;">
 			<div class="slide" >
                  <div id="pre" style="">
-                    <h1>route two</h1>
-                    <div style="text-align:center;">
-                      <button id="anchor">
+                    <img src="http://eskipaper.com/images/widescreen-wallpaper-11.jpg" class="slider-img">
+                     <div class="slider-info"style="">
+                        <h1 style="font-family:'Agency FB'; font-size:30pt;"><br>Hello</h1>
+                         
+                         <p style="font-size:12pt;text-align:justify;margin-left:30px;margin-right:30px;border-top:2px solid #999999;">
+                             <br>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                         </p>
+                         <br>
+                         <button id="anchor">
                         click me  
                       </button>
+                     </div>
+                    <div style="text-align:center;">
+                        
+                      
                     </div>
                   </div>
                 <!--
@@ -130,33 +337,74 @@
 				</div>
                 -->
 			</div>
+            
+            
 			<div class="slide">
-				<div class="intro">
-				
-                    <div id="pre" style="border-bottom:2px solid red;">
-                    <h1>route three</h1>
-                    <div style="text-align:center;">
-                      <button id="anchor2">
-                        click me  
+				<div id="pre" style="">
+                    <img src="http://www.hdbloggers.net/wp-content/uploads/2016/10/Dual-Screen-Monitor-Widescreen-Wallpaper.jpg" class="slider-img">
+                     <div class="slider-info"style="">
+                        <h1 style="font-family:'Agency FB'; font-size:30pt;"><br>Hello</h1>
+                         
+                         <p style="font-size:12pt;text-align:justify;margin-left:30px;margin-right:30px;border-top:2px solid #999999;">
+                             <br>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                         </p>
+                         <br>
+                         <button id="anchor2">
+                        View  
                       </button>
+                     </div>
+                    <div style="text-align:center;">
+                        
+                      
                     </div>
                   </div>
-                  
-				</div>
 			</div>
+            
+            
 			<div class="slide">
-				<div class="intro">
-				
-					<h1>Cool</h1>
-					<p>It just looks cool. Impress everybody with a simple and modern web design!</p>
-				</div>
+				<div id="pre" style="">
+                    <img src="http://www.hdbloggers.net/wp-content/uploads/2016/10/Nature-HD-Widescreen-Picture-Wallpaper.jpg" class="slider-img">
+                     <div class="slider-info"style="">
+                        <h1 style="font-family:'Agency FB'; font-size:30pt;"><br>Hello</h1>
+                         
+                         <p style="font-size:12pt;text-align:justify;margin-left:30px;margin-right:30px;border-top:2px solid #999999;">
+                             <br>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                         </p>
+                         <br>
+                         <button id="anchor2">
+                        click me  
+                      </button>
+                     </div>
+                    <div style="text-align:center;">
+                        
+                      
+                    </div>
+                  </div>
 			</div>
+            
+            
 			<div class="slide">
-				<div class="intro">
-					
-					<h1>Compatible</h1>
-					<p>Working in modern and old browsers too! IE 8 users don't have the fault of using that horrible browser! Lets give them a chance to see your site in a proper way!</p>
-				</div>
+				<div id="pre" style="">
+                    <img src="http://cdn.wallpapersafari.com/8/55/QxR79A.jpg" class="slider-img">
+                     <div class="slider-info"style="">
+                        <h1 style="font-family:'Agency FB'; font-size:30pt;"><br>Hello</h1>
+                         
+                         <p style="font-size:12pt;text-align:justify;margin-left:30px;margin-right:30px;border-top:2px solid #999999;">
+                             <br>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                         </p>
+                         <br>
+                         <button id="anchor2">
+                        click me  
+                      </button>
+                     </div>
+                    <div style="text-align:center;">
+                        
+                      
+                    </div>
+                  </div>
 			</div>
 		</div>
         
@@ -205,7 +453,7 @@
   <nav class="overlay-menu">
     <ul>
        <li ><a href="/index">Index</a></li>
-      <li><a href="/route2" action="/route2">routeTwo</a></li>
+      <li><a href="/route2">routeTwo</a></li>
       <li><a href="/route3">routeThree</a></li>
       <li><a href="/route4">routeFour</a></li>
     </ul>

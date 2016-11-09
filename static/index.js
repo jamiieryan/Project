@@ -28,12 +28,12 @@ $(document).ready(function(){
     //based on #anchor click
     $("#anchor2").click(function(){
         
-        $("#hide").slideUp(500);
+        $("#hide").fadeOut(750);
         //$("#pre").animate({width:'toggle'},500);
         
         
         //hides what's inside selected div and replaces it with item to be loaded 
-        $("#main").load("/route3",function(){}).hide().delay( 750 ).slideDown(250);
+        $("#main").load("/route3",function(){}).hide().delay( 750 ).fadeIn(1250);
         
     });
     

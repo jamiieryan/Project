@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Python Flask Bucket List App</title>
+
+   
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/css/signup.css" rel="stylesheet">
+    <script src="../static/js/jquery-1.11.2.js"></script>
+    
+      <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css') }}">
+	  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='animate.css') }}">
+   
+  </head>
+
+  <body>
+
+    <div class="container" style="margin-left:auto;margin-right:auto;position:relative;">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="active"><a href="/logout">Logout</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Data Representation & Querying</h3>
+      </div>
+
+      <div class="jumbotron">
+        <h1>Welcome {{name}} !!</h1>
+       
+      </div>
+        
+      <div class="row" style="border:1px solid red;">
+          <div class="col-md-6" style="border:1px solid green; height:30vh;">
+          
+          </div>
+          
+          
+          <div class="col-md-6" style="border:1px solid blue; height:30vh;">
+          
+          </div>
+        
+        
+      </div>
+        
+      <div class="row" style="border:1px solid red;">
+          <div class="col-md-6" style="border:1px solid green; height:30vh;">
+          
+          </div>
+          
+          
+          <div class="col-md-6" style="border:1px solid blue; height:30vh;">
+          
+          </div>
+        
+        
+      </div>
+
+      
+
+      <footer class="footer">
+        <p>&copy; Company 2015</p>
+      </footer>
+
+    </div>
+      
+      <div id="toggle" class="button_container">
+          <span class="top"></span>
+          <span class="middle"></span>
+          <span class="bottom"></span>
+        </div>
+
+        <div class="overlay" id="overlay">
+          <nav class="overlay-menu">
+            <ul>
+              <li ><a href="/userHome">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/index">Portfolio</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      
+      
+      <script type="text/javascript" src="{{ url_for('static', filename='wow.min.js') }}"></script>
+	  <script type="text/javascript" src="{{ url_for('static', filename='jquery.min.js') }}"></script>
+	  
+	  <script type="text/javascript" src="{{ url_for('static', filename='index.js') }}"></script> 
+  </body>
+</html>
