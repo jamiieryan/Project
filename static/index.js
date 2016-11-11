@@ -6,7 +6,7 @@ $('#toggle').click(function() {
 
 
 
-//fadeIn route2 div
+//Slider-Info click events
 $(document).ready(function(){
    
     
@@ -18,7 +18,6 @@ $(document).ready(function(){
         
         $("#hide").fadeOut(750);
         //$("#pre").animate({width:'toggle'},500);
-        
         
         //hides what's inside selected div and replaces it with item to be loaded 
         $("#main").load("/route2",function(){}).hide().delay( 750 ).fadeIn(1250);
@@ -37,8 +36,30 @@ $(document).ready(function(){
         
     });
     
+    //based on #anchor click
+    $("#anchor3").click(function(){
+        
+        $("#hide").fadeOut(750);
+        //$("#pre").animate({width:'toggle'},500);
+        
+        
+        //hides what's inside selected div and replaces it with item to be loaded 
+        $("#main").load("/route4",function(){}).hide().delay( 750 ).fadeIn(1250);
+        
+    });
     
-    
+    //based on #anchor click
+    $("#anchor4").click(function(){
+        
+        $("#hide").fadeOut(750);
+        //$("#pre").animate({width:'toggle'},500);
+        
+        
+        //hides what's inside selected div and replaces it with item to be loaded 
+        $("#main").load("/route5",function(){}).hide().delay( 750 ).fadeIn(1250);
+        
+    });
+ 
     
 });
 
