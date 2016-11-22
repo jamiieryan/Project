@@ -1,4 +1,4 @@
-from flask import Flask, render_template, json, request,redirect,session
+from flask import Flask, render_template, json, request,redirect,session,logging
 from flaskext.mysql import MySQL
 from werkzeug import generate_password_hash, check_password_hash
 
@@ -50,7 +50,33 @@ def showSignin():
 @app.route('/userHome')
 def userHome():
     if session.get('user'):
-        return render_template('userHome.html')
+        
+        #store logged in user email in variable        
+        loggedin = session.get('user')
+        
+        conn = mysql.connect()
+        cursor = conn.cursor()
+        
+        #get user_name where user_id = loggedin_id
+        cursor.execute("select user_name from tbl_user where user_id = (%s)", loggedin)
+        
+        #store response from cursor in user_name variable and format to string
+        user_name = str(cursor.fetchone()[0]) 
+        
+       
+        #get user_name where user_id = loggedin_id
+        cursor.execute("select bio from tbl_user where user_id = (%s)", loggedin)
+        
+        #store response from cursor in user_name variable and format to string
+        bio = str(cursor.fetchone()[0])
+        
+        
+        
+        cursor.close()
+        conn.close()
+    
+        return render_template('userHome.html', user_name = user_name, bio = bio)
+    
     else:
         return render_template('error.html',error = 'Unauthorized Access')
 

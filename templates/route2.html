@@ -34,9 +34,79 @@
             max-width:1920px;
             margin-left: auto;
             margin-right: auto;
+            
            
         }
+        
+        
+        
+        
+        
+        
+        . {
+          display: flex; /* equal height of the children */
+        }
+
+        .matchHeight {
+           /* additionally, equal width */
+          display:flex;
+          padding: 1em;
+          border: solid;
+        }
+        
+        
+        
+        /* Large Devices, Wide Screens */
+            @media only screen and (max-width : 1200px) {
+                
+            }
+
+            /* Medium Devices, Desktops */
+            @media only screen and (max-width : 992px) {
+                
+                .matchHeight {
+                  display:flex;
+                  padding: 1em;
+                  border: solid;
+                }
+            }
+
+            /* Small Devices, Tablets */
+            @media only screen and (max-width : 768px) {
+                   
+                .matchHeight {
+                  display:block;
+                  padding: 1em;
+                  border: solid;
+                }
+            }
+
+            /* Extra Small Devices, Phones */ 
+            @media only screen and (max-width : 480px) {
+                
+                   
+                .matchHeight {
+                  display:block;
+                  padding: 1em;
+                  border: solid;
+                }
+            }
+
+            /* Custom, iPhone Retina */ 
+            @media only screen and (max-width : 320px) {
+                
+                   
+                .matchHeight {
+                  display:block;
+                  padding: 1em;
+                  border: solid;
+                }
+            }
+        
+        
+        
     </style>
+    
     
    
     
@@ -52,29 +122,100 @@
   
     <div id="main" >
         <img src="http://cdn.wallpapersafari.com/74/56/1b94eg.jpg" style="width:100%;height:auto;"/>
+        
+        <div class="col-md-2 col-md-offset-5" style="text-align:center;margin-top:-150px;">
+           <a href="#innerMain"><img src="https://d30y9cdsu7xlg0.cloudfront.net/png/54414-200.png" style="width:66px;height:66px;filter: invert(100%);"/></a>
+        </div>
+        
+        
             <div id="innerMain" style="border:1px solid green;">
                 
-                <br>
-                <br>
-                <br>
-                <br>
-
-
+                
+                
+                
+            <!--    
             <div class="row" style="border:1px solid blue;">
+              <div style="border:1px solid yellow;"class="col">
+                  
+                  
+                  
+              </div>
+                
+                
+              <div style="border:1px solid yellow;"  class="col">
+                
+                
+              </div>
+            </div>
+                -->
 
-                <div class="col-md-4 col-md-offset-2" style="border:1px solid yellow;height:auto;">
-                    <p style="padding:8%;color:#e6e6e6;font-size:12pt;">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+            <div  class="row matchHeight" style="border:0px solid blue;">
+
+                <div class="col-sm-6 col-md-5 col-md-offset-1 col-lg-4 col-lg-offset-2" style="background:white;font-family:consolas;">
+                    
+                    <p style="padding-left:8%;padding-top:5%;color:#000000;font-size:20pt;">Hoag's Object</p>
+                    
+                    <p style="padding:8%;color:#000000;font-size:12pt;">
+                        Hoag’s Object almost looks like two distinct galaxies, with its bright yellow cluster of stars at the center and a blue ring of stars separated from the cluster by a large void of space. But no, this is one galaxy, much the same way Saturn is one planet and not a planet with a ring-shaped planet around it.When tasked with solving the problem of how Hoag’s object was formed, science came up with a resounding “what?” In the end, they just labeled it as a type of ring galaxy and moved on. Want an example of another galaxy of this type? Look just inside the top end of the ring. There’s one off in the distance, which is bizarre, since these kinds of galaxies are pretty rare.
                     </p>
                 </div>
 
-                <div class="col-md-4" style="border:1px solid red;height:auto;">
-                    <img src="https://www.noao.edu/image_gallery/images/d2/NGC1365-500.jpg" style="width:100%;max-height:auto;">
+                <div class="col-sm-6 col-md-5 col-lg-4" style="border:0px solid white;height:auto;background:black;">
+                    <img src="http://www.spacedaily.com/images/spaceart-hub-doublewheel-desk-1280.jpg" style="width:100%;max-height:auto;">
+                </div>
+
+            </div>
+                
+                <br><br>
+                
+            
+            <div  class="row matchHeight" style="border:0px solid blue;">
+
+                <div class="col-sm-6 col-md-5 col-md-offset-1 col-lg-4 col-lg-offset-2" style="background:white;font-family:consolas;">
+                    
+                    <p style="padding-left:8%;padding-top:5%;color:#000000;font-size:20pt;">ARP 87</p>
+                    
+                    <p style="padding:8%;color:#000000;font-size:12pt;">
+                        Arp 87 is what you get when two galaxies enter into a steel cage match—and only one leaves. Galactic collisions are actually pretty common and sometimes result in a lot of near misses, like what is going on here.These two galaxies almost ran into one another a few billion years ago and gravity has strung out material between the two as they moved apart. It’s likely that they’ll sweep back toward one another in a series of near misses until they eventually merge into one big galaxy. For now, they remain tethered together by a thin stream of stars, gas, and dust particles, like enormous intergalactic bolas, which can only mean one thing: space Incas.
+                    </p>
+                </div>
+
+                <div class="col-sm-6 col-md-5 col-lg-4" style="border:0px solid white;height:auto;background:black;">
+                    <img src="http://sci.esa.int/science-e-media/img/24/heic0717a-wallpaper.jpg" style="width:100%;max-height:auto;">
                 </div>
 
             </div>
                 
                 <br><br><br><br><br><br><br><br><br><br><br>
+                
+               
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
             <div class="row" style="border:1px solid blue;">

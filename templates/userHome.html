@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Python Flask Bucket List App</title>
+    <title>Home Profile</title>
 
    
     <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -9,15 +9,286 @@
     <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
     <link href="../static/css/signup.css" rel="stylesheet">
     <script src="../static/js/jquery-1.11.2.js"></script>
+      
+      <script type="text/javascript" src="{{ url_for('static', filename='progressbar.js') }}"></script>
+      <script src="../static/progressbar.js"></script>
+      <script async src="//jsfiddle.net/kimmobrunfeldt/mxjj6jom/embed/"></script>
+      
+      
+      
     
       <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css') }}">
 	  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='animate.css') }}">
    
+      <script>
+
+      
+          
+    window.onload = function onLoad() {
+     var bar = new ProgressBar.Circle('#container', {
+          strokeWidth: 6,
+          easing: 'easeInOut',
+          duration: 1400,
+          color: '#3399ff',
+          trailColor: '#eee',
+          trailWidth: 1,
+          svgStyle: null
+        });
+        
+        
+    var bar2 = new ProgressBar.Circle('#container2', {
+          strokeWidth: 6,
+          easing: 'easeInOut',
+          duration: 1400,
+          color: '#FFEA82',
+          trailColor: '#eee',
+          trailWidth: 1,
+          svgStyle: null
+        });
+        
+    var bar3 = new ProgressBar.Circle('#container3', {
+          strokeWidth: 6,
+          easing: 'easeInOut',
+          duration: 1400,
+          color: '#d5ff80',
+          trailColor: '#eee',
+          trailWidth: 1,
+          svgStyle: null
+        });
+
+    
+
+    bar.animate(.89);  // Number from 0.0 to 1.0  
+    bar2.animate(.69);  // Number from 0.0 to 1.0
+    bar3.animate(.75);  // Number from 0.0 to 1.0
+};
+          
+
+      </script>
+      
+      <style>
+        .row{
+        
+            max-width: 1920px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+          
+        .cardImage{
+            
+            box-shadow: 10px 10px 30px #333333
+        }
+          
+          
+      #container {
+          margin: 20px;
+          width: 200px;
+          height: 200px;
+          
+           margin-left: auto;
+         margin-right: auto;
+        }
+          
+      #container2 {
+          margin: 20px;
+          width: 200px;
+          height: 200px;
+          
+           margin-left: auto;
+         margin-right: auto;
+        }
+      
+     #container3 {
+          margin: 20px;
+          width: 200px;
+          height: 200px;
+         margin-left: auto;
+         margin-right: auto;
+        }
+          
+          .bar{
+              
+              border:1px solid black;
+              background: 
+          }
+      
+      </style>
   </head>
 
-  <body>
+  <body style="border:1px solid blue;background:#ffffff;">
+      
+     <div class="row" style="padding-right:20px;">
+         
+         <!--PROFILE PIC-->
+          <div class="col-md-3 col-md-offset-1">
+              <div style="background:#f2f2f2;box-shadow: 10px 10px 30px #333333;margin-right:;">
+               
+              
+                 <img class="" src="http://jnrgym.com/wp-content/uploads/2013/08/Facebook-no-profile-picture-icon-620x389.jpg" style="width:100%;max-height:100%;padding:5%;"> 
 
-    <div class="container" style="margin-left:auto;margin-right:auto;position:relative;">
+
+                <p style="border:1px solid red;text-align:center;font-size:30pt;">
+                  {{ user_name }}
+                    
+                </p>
+
+                  <!--
+                <img class="cardImage" src="https://www.askideas.com/media/13/Welcome-And-Enjoy.jpg" style="width:100%;max-height:100%;">
+                  <br><br>
+                <img class="cardImage" src="http://cdn.wallpapersafari.com/74/56/1b94eg.jpg" style="width:100%;max-height:100%;">
+                  <br><br>
+                <img class="cardImage" src="http://www.hdbloggers.net/wp-content/uploads/2016/10/Nature-HD-Widescreen-Picture-Wallpaper.jpg" style="width:100%;max-height:100%;">
+                  <br><br>
+                <img class="cardImage" src="http://cdn.wallpapersafari.com/8/55/QxR79A.jpg" style="width:100%;max-height:100%;">
+                  <br><br>
+                <img class="cardImage" src="http://www.hdbloggers.net/wp-content/uploads/2016/10/Dual-Screen-Monitor-Widescreen-Wallpaper.jpg" style="width:100%;max-height:100%;">
+-->
+          </div>
+             
+              
+              
+              
+            <div style="background:#f2f2f2;box-shadow: 10px 10px 30px #333333;margin-right:;">
+               
+                <h2 style="padding-left:5%;padding-top:5%;">About {{user_name}}</h2>
+                  <p style="background:;padding:5%;text-align:justify;">
+                    {{bio}}
+                  
+                  </p>
+              </div>
+              
+              
+            <div style="background:#f2f2f2;box-shadow: 10px 10px 30px #333333;margin-right:;">
+               
+                <h2 style="padding-left:5%;padding-top:5%;">About Jamie</h2>
+                  <p style="background:;padding:5%;text-align:justify;">
+                  
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. 
+                  </p>
+              </div>
+              
+              
+              
+         </div>
+          
+         
+         
+         
+         
+         
+          
+        <div class="col-md-6" style="border:0px solid blue; height:1000px;background:#f2f2f2;box-shadow: 10px 10px 30px #333333;">
+                
+            <div style="width:100%;margin-top:2%;height:20%;background:white;">
+                <h2 style="padding:10px;">Name</h2>
+                
+                <p style="padding:10px;">00:00:00 - 01/01/2016</p>
+                 <p style="padding:10px;text-align:justify;">
+                  
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+                  </p>
+            
+            </div>
+            
+            
+            
+            <div style="width:100%;margin-top:2%;height:20%;background:white;">
+            
+            
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+              <!--
+              <br>
+               <div class="bar col-md-12" style="background:black;">
+                
+                  
+                  <h2>Hello</h2>
+                  
+                  <p style="color:white;padding:10px;text-align:justify;">
+                  
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
+                  </p>
+              </div>
+              
+              
+            
+              <div class="bar col-md-4">
+                <div id="container"></div>
+                  <h1 style="">89%</h1>
+                  
+                  <h2>Hello</h2>
+                  
+                  <p style="background:white;padding:10px;text-align:justify;">
+                  
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
+                  </p>
+              </div>
+              
+              <div class="bar col-md-4">
+                <div id="container2"></div>
+                  <h1 style="">69%</h1>
+                  
+                  <h2>Hello</h2>
+                  
+                  <p style="background:white;padding:10px;text-align:justify;">
+                  
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
+                  </p>
+              </div>
+              
+              <div class="bar col-md-4">
+                <div id="container3"></div>
+                  <h1 style="">75%</h1>
+                  
+                  <h2>Hello</h2>
+                  
+                  <p style="background:white;padding:10px;text-align:justify;">
+                  
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
+                  </p>
+              </div>
+              
+              <div class="bar col-md-12" style="background:black;">
+                
+                  
+                  <h2>Hello</h2>
+                  
+                  <p style="color:white;padding:10px;text-align:justify;">
+                  
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
+                  </p>
+              </div>
+             
+              
+          </div>-->
+        
+        
+      </div> 
+ </div><!--Close Row-->
+      
+      
+      
+      
+      
+      
+      
+    <!--  
+    <div class="container" style="margin-left:auto;margin-right:auto;position:relative;border:1px solid green;">
       <div class="header">
         <nav>
           <ul class="nav nav-pills pull-right">
@@ -64,7 +335,7 @@
         <p>&copy; Company 2015</p>
       </footer>
 
-    </div>
+    </div>-->
       
       <div id="toggle" class="button_container">
           <span class="top"></span>
@@ -78,7 +349,7 @@
               <li ><a href="/userHome">Home</a></li>
               <li><a href="/about">About</a></li>
               <li><a href="/index">Portfolio</a></li>
-              <li><a href="/contact">Contact</a></li>
+                <li><a href="/logout">Logout</a></li>
             </ul>
           </nav>
         </div>
@@ -88,5 +359,6 @@
 	  <script type="text/javascript" src="{{ url_for('static', filename='jquery.min.js') }}"></script>
 	  
 	  <script type="text/javascript" src="{{ url_for('static', filename='index.js') }}"></script> 
+       
   </body>
 </html>
