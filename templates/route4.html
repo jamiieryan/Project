@@ -4,38 +4,267 @@
   <meta charset="UTF-8">
   <title>Projet</title>
   
+    
   
-  <!--
+   <!--
 
       
 	  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css') }}">
 	  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='animate.css') }}">
-	  
-	  <script type="text/javascript" src="{{ url_for('static', filename='wow.min.js') }}"></script>
-	  <script type="text/javascript" src="{{ url_for('static', filename='jquery.min.js') }}"></script>
-	  
-	  <script type="text/javascript" src="{{ url_for('static', filename='index.js') }}"></script> 
-    
-    -->
+	
     
     
+    
+   
     
         <link rel= "stylesheet" type= "text/css" href= "/static/styles.css">
 	  <link rel= "stylesheet" type= "text/css" href= "/static/animate.css">
     <link rel= "stylesheet" type= "text/scss" href= "/static/styles.scss">
-	  
-	  
-    
+	  -->
+	  <script>
+        //based on #anchor click
+         $("#projNavNxt").click(function(){
 
+            console.log("button clicked");
+
+            $("#innerMain").fadeOut(750);
+            //$("#pre").animate({width:'toggle'},500);
+
+
+            //hides what's inside selected div and replaces it with item to be loaded 
+            $("#innerMain").load("/route5",function(){}).hide().delay( 750 ).fadeIn(1250);
+
+        });
+          
+        //based on #anchor click
+         $("#projNavPrv").click(function(){
+
+            console.log("button clicked");
+
+            $("#innerMain").fadeOut(750);
+            //$("#pre").animate({width:'toggle'},500);
+
+
+            //hides what's inside selected div and replaces it with item to be loaded 
+            $("#innerMain").load("/route3",function(){}).hide().delay( 750 ).fadeIn(1250);
+
+        });
+    </script>
+    <style>
+        
+        #main
+        {
+            max-width:100vw;
+            
+        } 
+        #innerMain{
+            
+            max-width:1920px;
+            margin-left: auto;
+            margin-right: auto;
+            
+           
+        }
+        
+        
+        
+        
+        
+        
+        . {
+          display: flex; /* equal height of the children */
+        }
+
+        .matchHeight {
+           /* additionally, equal width */
+          display:flex;
+          padding: 1em;
+          border: solid;
+        }
+        
+        
+        
+        /* Large Devices, Wide Screens */
+            @media only screen and (max-width : 1200px) {
+                
+            }
+
+            /* Medium Devices, Desktops */
+            @media only screen and (max-width : 992px) {
+                
+                .matchHeight {
+                  display:flex;
+                  padding: 1em;
+                  border: solid;
+                }
+            }
+
+            /* Small Devices, Tablets */
+            @media only screen and (max-width : 768px) {
+                 
+            
+                .matchHeight {
+                  display:block;
+                  padding: 1em;
+                  border: solid;
+                }
+            }
+
+            /* Extra Small Devices, Phones */ 
+            @media only screen and (max-width : 480px) {
+                
+                   
+                .matchHeight {
+                  display:block;
+                  padding: 1em;
+                  border: solid;
+                }
+            }
+
+            /* Custom, iPhone Retina */ 
+            @media only screen and (max-width : 320px) {
+                
+                   
+                .matchHeight {
+                  display:block;
+                  padding: 1em;
+                  border: solid;
+                }
+            }
+        
+        
+        
+    </style>
+    
+    
+   
     
 </head>
 
 <body>
     
     
-  <div class="container">
-     <h1>ROUTE 4</h1>
-  </div>
+    
+    
+    
+    
+  
+    <div id="main" >
+        
+        <!--
+        <img src="http://cdn.wallpapersafari.com/74/56/1b94eg.jpg" style="width:100%;height:auto;"/>
+        
+        <div class="col-md-2 col-md-offset-5" style="text-align:center;margin-top:-150px;">
+           <a href="#innerMain"><img src="https://d30y9cdsu7xlg0.cloudfront.net/png/54414-200.png" style="width:66px;height:66px;filter: invert(100%);"/></a>
+        </div>
+        -->
+        
+            <div id="innerMain" style="border:0px solid green;padding:1%;">
+                
+                
+                
+                
+            <!--    
+            <div class="row" style="border:1px solid blue;">
+              <div style="border:1px solid yellow;"class="col">
+                  
+                  
+                  
+              </div>
+                
+                
+              <div style="border:1px solid yellow;"  class="col">
+                
+                
+              </div>
+            </div>
+                -->
+                
+             
+
+                <div style="height:auto;padding-bottom:1%;">
+                    <img src="http://i3.wallpaperscraft.com/image/milky_way_stars_space_nebula_68885_2560x1080.jpg" style="width:100%;max-height:auto;box-shadow: 10px 10px 30px #333333;">
+                 </div>
+                 
+                 
+                 
+                 <div class="col-md-8" style="background:white;box-shadow: 10px 10px 30px #333333;">
+                     <h1 style="padding-left:5%;">
+                         <br>
+                        {{title}}
+                     </h1>
+                     
+                    <p style="padding:5%;font-size:14pt;text-align:justify;">
+                        {{body}}
+                     
+                    </p>
+                 </div>
+                 
+                 
+                 <!--To right of article-->
+                 <div class="col-md-4" style="margin-right:0%;padding-right:0%;">
+                    <img src="https://i.ytimg.com/vi/kxfeTcty3Do/maxresdefault.jpg" style="width:100%;max-height:auto;box-shadow: 10px 10px 30px #333333;">
+                    <br><br> 
+                    <img src="https://s-media-cache-ak0.pinimg.com/originals/38/03/e1/3803e12e3428436a1dcbcd8ddc4f3cd4.jpg" style="width:100%;max-height:auto;box-shadow: 10px 10px 30px #333333;">
+                    <br><br>
+                    <img src="http://www.aiglonspace.com/wp-content/uploads/2013/11/space-the-sky-the-galaxy-stars-Favim.com-481975.jpg" style="width:100%;max-height:auto;box-shadow: 10px 10px 30px #333333;">
+                    
+                 </div>
+
+               
+                
+                
+                
+                
+                
+              
+                
+                
+                
+                
+                
+  
+            
+        
+        
+            
+        
+        
+            
+              
+                
+                
+            <div class="row" style="border:px solid blue;">
+                
+                
+                
+                
+                <div class="col-md-2 col-md-offset-5" style="text-align:center;margin-top:5%;">
+                    
+                   <button id="projNavPrv" style="background:#a6a6a6;text-align:center;width:50%;">
+                        Previous
+                    </button>
+                    
+                    <button id="projNavNxt" style="background:#a6a6a6;text-align:center; margin-left:-10px;width:50%;">
+                        &nbsp;&nbsp;&nbsp;&nbsp;Next&nbsp;&nbsp;&nbsp;&nbsp;
+                    </button>
+                </div>
+                
+                
+            </div> 
+        
+        
+        
+            
+        
+        
+        
+                
+            
+        </div>
+    </div>
+    
+  
 
     
     
@@ -44,7 +273,7 @@
     
     
     
-    
+ <!--   
 <div id="toggle" class="button_container">
   <span class="top"></span>
   <span class="middle"></span>
@@ -54,7 +283,7 @@
 <div class="overlay" id="overlay">
   <nav class="overlay-menu">
     <ul>
-       <li ><a href="/">routeOne</a></li>
+      <li ><a href="/">routeOne</a></li>
       <li><a href="/route2">routeTwo</a></li>
       <li><a href="/route3">routeThree</a></li>
       <li><a href="/route4">routeFour</a></li>
@@ -68,5 +297,12 @@
 	  
 	  <script type="text/javascript" src="/static/index.js"></script>  
 
+    
+      
+	  <script type="text/javascript" src="{{ url_for('static', filename='wow.min.js') }}"></script>
+	  <script type="text/javascript" src="{{ url_for('static', filename='jquery.min.js') }}"></script>
+	  
+	  <script type="text/javascript" src="{{ url_for('static', filename='index.js') }}"></script> 
+-->
 </body>
 </html>

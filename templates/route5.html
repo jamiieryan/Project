@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Projet</title>
+  
+    
+  
+   <!--THESE PAGES HAVE THE BULK OF THEIR STYLES APPLIED VIA THE INDEX.HTML PAGE-->
+    
+    
+	  <script>
+        //based on #anchor click
+         $("#projNavNxt").click(function(){
+
+            console.log("button clicked");
+
+            $("#innerMain").fadeOut(750);
+            //$("#pre").animate({width:'toggle'},500);
+
+
+            //hides what's inside selected div and replaces it with item to be loaded 
+            $("#innerMain").load("/route2",function(){}).hide().delay( 750 ).fadeIn(1250);
+
+        });
+          
+        //based on #anchor click
+         $("#projNavPrv").click(function(){
+
+            console.log("button clicked");
+
+            $("#innerMain").fadeOut(750);
+            //$("#pre").animate({width:'toggle'},500);
+             
+            //reloads index slider
+            $("#innerMain").load("/route4",function(){}).hide().delay( 750 ).fadeIn(1250);
+
+        });
+    </script>
+    <style>
+        
+        #main
+        {
+            max-width:100vw;
+            
+        } 
+        #innerMain{
+            
+            max-width:1920px;
+            margin-left: auto;
+            margin-right: auto;
+            
+           
+        }
+        
+        
+        
+        
+        
+        
+        . {
+          display: flex; /* equal height of the children */
+        }
+
+        .matchHeight {
+           /* additionally, equal width */
+          display:flex;
+          padding: 1em;
+          border: solid;
+        }
+        
+        
+        
+        /* Large Devices, Wide Screens */
+            @media only screen and (max-width : 1200px) {
+                
+            }
+
+            /* Medium Devices, Desktops */
+            @media only screen and (max-width : 992px) {
+                
+                .matchHeight {
+                  display:flex;
+                  padding: 1em;
+                  border: solid;
+                }
+            }
+
+            /* Small Devices, Tablets */
+            @media only screen and (max-width : 768px) {
+                 
+            
+                .matchHeight {
+                  display:block;
+                  padding: 1em;
+                  border: solid;
+                }
+            }
+
+            /* Extra Small Devices, Phones */ 
+            @media only screen and (max-width : 480px) {
+                
+                   
+                .matchHeight {
+                  display:block;
+                  padding: 1em;
+                  border: solid;
+                }
+            }
+
+            /* Custom, iPhone Retina */ 
+            @media only screen and (max-width : 320px) {
+                
+                   
+                .matchHeight {
+                  display:block;
+                  padding: 1em;
+                  border: solid;
+                }
+            }
+        
+        
+        
+    </style>
+    
+    
+   
+    
+</head>
+
+<body>
+    
+    
+    
+    
+    
+    
+  
+    <div id="main" >
+        
+            <div id="innerMain" style="border:0px solid green;padding:1%;">
+                
+                <div style="height:auto;padding-bottom:1%;">
+                    <img src="https://wallpaperscraft.com/image/earth_planet_day_night_1451_2560x1080.jpg" style="width:100%;max-height:auto;box-shadow: 10px 10px 30px #333333;">
+                 </div>
+                 
+                 
+                 
+                 <div class="col-md-8" style="background:white;box-shadow: 10px 10px 30px #333333;">
+                     <h1 style="padding-left:5%;">
+                         <br>
+                        {{title}}
+                     </h1>
+                     
+                    <p style="padding:5%;font-size:14pt;text-align:justify;">
+                        {{body}}
+                     
+                    </p>
+                 </div>
+                 
+                 
+                 <!--To right of article-->
+                 <div class="col-md-4" style="margin-right:0%;padding-right:0%;">
+                     
+                    <img src="http://www.allabout-energy.com/Pphotos/holdingTheEarth.jpg" style="width:100%;max-height:auto;box-shadow: 10px 10px 30px #333333;">
+                        <br><br> 
+                    <img src="http://i2.cdn.turner.com/money/dam/assets/160114173559-oxfam-wealth-inequality-headline-780x439.jpg" style="width:100%;max-height:auto;box-shadow: 10px 10px 30px #333333;">
+                        <br><br>
+                    <img src="https://s-media-cache-ak0.pinimg.com/736x/42/07/0b/42070b1cfbb70d72a66fe6ea432120bd.jpg" style="width:100%;max-height:auto;box-shadow: 10px 10px 30px #333333;">
+                    
+                 </div>
+
+               
+                
+   
+                
+
+                    <div class="row" style="border:px solid blue;">
+
+                        <div class="col-md-2 col-md-offset-5" style="text-align:center;margin-top:5%;">
+                            
+                            <button id="projNavPrv" style="background:#a6a6a6;text-align:center;width:50%;">
+                                Previous
+                            </button>
+
+                            <button id="projNavNxt" style="background:#a6a6a6;text-align:center; margin-left:-10px;width:50%;">
+                                &nbsp;&nbsp;&nbsp;&nbsp;Next&nbsp;&nbsp;&nbsp;&nbsp;
+                            </button>
+                            
+                        </div>
+
+                    </div> 
+        
+
+                
+            
+        </div>
+    </div>
+    
+</body>
+</html>

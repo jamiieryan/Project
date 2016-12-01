@@ -1,0 +1,36 @@
+<html>
+<head>
+    
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css') }}">
+	  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='animate.css') }}">
+    
+</head>
+    
+    <body style="background:#a6a6a6;">
+      
+
+        <div id="toggle" class="button_container">
+            <span style="background:#99ff33;" class="top"></span>
+            <span style="background:#99ff33;" class="middle"></span>
+            <span style="background:#99ff33;" class="bottom"></span>
+        </div>
+
+        <div class="overlay" id="overlay">
+          <nav class="overlay-menu">
+            <ul>
+              <li><a  href="/userHome">Profile</a></li>
+              <li><a style="color:#99ff33;" href="/about">About</a></li>
+              <li><a href="/index">Articles</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+          </nav>
+        </div>
+        
+          <script type="text/javascript" src="{{ url_for('static', filename='wow.min.js') }}"></script>
+	  <script type="text/javascript" src="{{ url_for('static', filename='jquery.min.js') }}"></script>
+	  
+	  <script type="text/javascript" src="{{ url_for('static', filename='index.js') }}"></script>
+        
+    
+    </body>
+</html>  

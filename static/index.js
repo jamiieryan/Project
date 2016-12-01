@@ -3,7 +3,8 @@ $('#toggle').click(function() {
    $(this).toggleClass('active');
    $('#overlay').toggleClass('open');
   });
-
+    
+$("body").delay(350).fadeIn(750);
 
 
 //Slider-Info click events
@@ -38,6 +39,7 @@ $(document).ready(function(){
     
     //based on #anchor click
     $("#anchor3").click(function(){
+        console.log("anchor 3 clicked");
         
         $("#hide").fadeOut(750);
         //$("#pre").animate({width:'toggle'},500);
@@ -59,9 +61,12 @@ $(document).ready(function(){
         $("#main").load("/route5",function(){}).hide().delay( 750 ).fadeIn(1250);
         
     });
- 
+    
+    
     
 });
+
+
 
 
 

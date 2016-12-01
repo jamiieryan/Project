@@ -21,7 +21,35 @@
 	  <link rel= "stylesheet" type= "text/css" href= "/static/animate.css">
     <link rel= "stylesheet" type= "text/scss" href= "/static/styles.scss">
 	  -->
-	  
+	  <script>
+        //based on #anchor click
+         $("#projNavNxt").click(function(){
+
+            console.log("button clicked");
+
+            $("#innerMain").fadeOut(750);
+            //$("#pre").animate({width:'toggle'},500);
+
+
+            //hides what's inside selected div and replaces it with item to be loaded 
+            $("#innerMain").load("/route3",function(){}).hide().delay( 750 ).fadeIn(1250);
+
+        });
+          
+        //based on #anchor click
+         $("#projNavPrv").click(function(){
+
+            console.log("button clicked");
+
+            $("#innerMain").fadeOut(750);
+            //$("#pre").animate({width:'toggle'},500);
+
+
+            //hides what's inside selected div and replaces it with item to be loaded 
+            $("#innerMain").load("/route5",function(){}).hide().delay( 750 ).fadeIn(1250);
+
+        });
+    </script>
     <style>
         
         #main
@@ -73,7 +101,8 @@
 
             /* Small Devices, Tablets */
             @media only screen and (max-width : 768px) {
-                   
+                 
+            
                 .matchHeight {
                   display:block;
                   padding: 1em;
@@ -121,14 +150,16 @@
     
   
     <div id="main" >
+        
+        <!--
         <img src="http://cdn.wallpapersafari.com/74/56/1b94eg.jpg" style="width:100%;height:auto;"/>
         
         <div class="col-md-2 col-md-offset-5" style="text-align:center;margin-top:-150px;">
            <a href="#innerMain"><img src="https://d30y9cdsu7xlg0.cloudfront.net/png/54414-200.png" style="width:66px;height:66px;filter: invert(100%);"/></a>
         </div>
+        -->
         
-        
-            <div id="innerMain" style="border:1px solid green;">
+            <div id="innerMain" style="border:0px solid green;">
                 
                 
                 
@@ -151,7 +182,7 @@
 
             <div  class="row matchHeight" style="border:0px solid blue;">
 
-                <div class="col-sm-6 col-md-5 col-md-offset-1 col-lg-4 col-lg-offset-2" style="background:white;font-family:consolas;">
+                <div class="col-sm-6 col-md-6 col-md-offset- col-lg-5 col-lg-offset-1" style="background:white;font-family:consolas;">
                     
                     <p style="padding-left:8%;padding-top:5%;color:#000000;font-size:20pt;">Hoag's Object</p>
                     
@@ -160,7 +191,7 @@
                     </p>
                 </div>
 
-                <div class="col-sm-6 col-md-5 col-lg-4" style="border:0px solid white;height:auto;background:black;">
+                <div class="col-sm-6 col-md-6 col-lg-5" style="border:0px solid white;height:auto;background:black;">
                     <img src="http://www.spacedaily.com/images/spaceart-hub-doublewheel-desk-1280.jpg" style="width:100%;max-height:auto;">
                 </div>
 
@@ -171,7 +202,7 @@
             
             <div  class="row matchHeight" style="border:0px solid blue;">
 
-                <div class="col-sm-6 col-md-5 col-md-offset-1 col-lg-4 col-lg-offset-2" style="background:white;font-family:consolas;">
+                <div class="col-sm-6 col-md-6 col-md-offset- col-lg-5 col-lg-offset-1" style="background:white;font-family:consolas;">
                     
                     <p style="padding-left:8%;padding-top:5%;color:#000000;font-size:20pt;">ARP 87</p>
                     
@@ -180,11 +211,98 @@
                     </p>
                 </div>
 
-                <div class="col-sm-6 col-md-5 col-lg-4" style="border:0px solid white;height:auto;background:black;">
+                <div class="col-sm-6 col-md-6 col-lg-5" style="border:0px solid white;height:auto;background:black;">
                     <img src="http://sci.esa.int/science-e-media/img/24/heic0717a-wallpaper.jpg" style="width:100%;max-height:auto;">
                 </div>
 
             </div>
+                
+                
+                <br><br>
+                
+            
+            <div  class="row matchHeight" style="border:0px solid blue;">
+
+                <div class="col-sm-6 col-md-6 col-md-offset- col-lg-5 col-lg-offset-1" style="background:white;font-family:consolas;">
+                    
+                    <p style="padding-left:8%;padding-top:5%;color:#000000;font-size:20pt;">Sombrero Galaxy</p>
+                    
+                    <p style="padding:8%;color:#000000;font-size:12pt;">
+                        The Sombrero Galaxy, unsurprisingly, bears a striking resemblance to the hat of the same name. It has a large bulge in the center where some imaginary cosmic giant’s head might go and a broad, sweeping “brim.”When we look at the bulge a bit closer, you can see that it’s actually made up of several different clusters of stars, rather than just one big one. The brim is pretty strange, too: Its intricate detail is another one of those things about space that makes science scratch its head. We’re not sure how rings like this were able to form. It’s also highly likely that the heart of the Sombrero Galaxy harbors a massive black hole.
+                    </p>
+                </div>
+
+                <div class="col-sm-6 col-md-6 col-lg-5" style="border:0px solid white;height:auto;background:black;">
+                    <img src="http://space-facts.com/wp-content/uploads/sombrero-galaxy.png" style="width:100%;max-height:auto;">
+                </div>
+
+            </div>
+                
+                
+                <br><br>
+                
+            
+            <div  class="row matchHeight" style="border:0px solid blue;">
+
+                <div class="col-sm-6 col-md-6 col-md-offset- col-lg-5 col-lg-offset-1" style="background:white;font-family:consolas;">
+                    
+                    <p style="padding-left:8%;padding-top:5%;color:#000000;font-size:20pt;">Antennae Galaxies</p>
+                    
+                    <p style="padding:8%;color:#000000;font-size:12pt;">
+                        Here, we have another pair of galaxies devouring one another, but much farther along in the process. The only way you can tell there used to be two galaxies here is by the yellow clusters of stars at either end—these used to be the galactic centers. Now one giant, amorphous blob, these galaxies are slowly chugging toward a state of equilibrium that with result in the new galaxy’s final shape.Most of the currently existing star clusters in this galactic pair will part ways before the new galaxy is totally formed—only the largest clusters will survive the merger. Perhaps the most interesting thing we can learn from observing this process is what will happen when the Milky Way inevitably merges with the nearby Andromeda galaxy, which is headed in our direction. Don’t worry, though: It won’t be for a few billion years.
+                    </p>
+                </div>
+
+                <div class="col-sm-6 col-md-6 col-lg-5" style="border:0px solid white;height:auto;background:black;">
+                    <img src="http://img.photobucket.com/albums/v188/cityx/Universe/NGC4038-4039AA.jpg" style="width:100%;max-height:auto;">
+                </div>
+
+            </div>
+                
+                
+                
+                      <br><br>
+                
+            
+            <div  class="row matchHeight" style="border:0px solid blue;">
+
+                <div class="col-sm-6 col-md-6 col-md-offset- col-lg-5 col-lg-offset-1" style="background:white;font-family:consolas;">
+                    
+                    <p style="padding-left:8%;padding-top:5%;color:#000000;font-size:20pt;">Centaurus A</p>
+                    
+                    <p style="padding:8%;color:#000000;font-size:12pt;">
+                        To the untrained eye, it might be difficult to distinguish Centaurus A as anything remarkable, but when you take a closer look, there’s something peculiar going on here. Centaurus A is large by galaxy standards, and large galaxies often come in one of two flavors: spiral and elliptical. But when astronomers took a look at this galaxy using radio imaging to peer through the veil of dust, they revealed a spiral hidden underneath. This is quite odd, since galaxies are generally one or the other. It is the only elliptical galaxy we’ve ever found that has spiral arms. The theory is that Centaurus A absorbed a spiral galaxy some millions of years ago, but such mergers don’t often—or ever, really—leave the spiral arms intact, so we have no clue what is happening here.
+                    </p>
+                </div>
+
+                <div class="col-sm-6 col-md-6 col-lg-5" style="border:0px solid white;height:auto;background:black;">
+                    <img src="http://scitechdaily.com/images/Hubble-Reveals-an-In-Depth-Look-at-the-Giant-Elliptical-Galaxy-Centaurus-A.jpg" style="width:100%;max-height:auto;top:50;">
+                </div>
+
+            </div>
+                
+            
+                       <br><br>
+                
+            
+            <div  class="row matchHeight" style="border:0px solid blue;">
+
+                <div class="col-sm-6 col-md-6 col-md-offset- col-lg-5 col-lg-offset-1" style="background:white;font-family:consolas;">
+                    
+                    <p style="padding-left:8%;padding-top:5%;color:#000000;font-size:20pt;">Centaurus A</p>
+                    
+                    <p style="padding:8%;color:#000000;font-size:12pt;">
+                        To the untrained eye, it might be difficult to distinguish Centaurus A as anything remarkable, but when you take a closer look, there’s something peculiar going on here. Centaurus A is large by galaxy standards, and large galaxies often come in one of two flavors: spiral and elliptical. But when astronomers took a look at this galaxy using radio imaging to peer through the veil of dust, they revealed a spiral hidden underneath. This is quite odd, since galaxies are generally one or the other. It is the only elliptical galaxy we’ve ever found that has spiral arms. The theory is that Centaurus A absorbed a spiral galaxy some millions of years ago, but such mergers don’t often—or ever, really—leave the spiral arms intact, so we have no clue what is happening here.
+                    </p>
+                </div>
+
+                <div class="col-sm-6 col-md-6 col-lg-5" style="border:0px solid white;height:auto;background:black;">
+                    <img src="http://scitechdaily.com/images/Hubble-Reveals-an-In-Depth-Look-at-the-Giant-Elliptical-Galaxy-Centaurus-A.jpg" style="width:100%;max-height:auto;top:50;">
+                </div>
+
+            </div>   
+                
+                
                 
                 <br><br><br><br><br><br><br><br><br><br><br>
                 
@@ -214,7 +332,7 @@
                 
                 
                 
-                
+          <!--      
                 
                 
                 
@@ -283,26 +401,39 @@
             
         
         
-            <div class="row" style="border:1px solid blue;">
-                
-                <img src="http://www.wallpapersbyte.com/wp-content/uploads/2015/06/Space-Sky-Stars-In-Red-Blue-Color-WallpapersByte-com-2560x1080.jpg" style="width:100%;max-height:auto;max-width:1920px;padding:10%;">
-                
-            </div> 
+            
               
                 
                 
-            <div class="row" style="border:1px solid blue;">
+            <div class="row" style="border:px solid blue;">
                 
                 <img src="http://i3.wallpaperscraft.com/image/milky_way_stars_space_nebula_68885_2560x1080.jpg" style="width:100%;max-height:auto;max-width:1920px;padding:10%;">
+                
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                
+                
+                <div class="col-md-2 col-md-offset-5" style="text-align:center;margin-top:-150px;border:3px solid blue;">
+                    
+                   <button id="projNavPrv" style="background:white;text-align:center;width:50%;">
+                        Previous
+                    </button>
+                    
+                    <button id="projNavNxt" style="background:white;text-align:center; margin-left:-10px;width:50%;">
+                        &nbsp;&nbsp;&nbsp;&nbsp;Next&nbsp;&nbsp;&nbsp;&nbsp;
+                    </button>
+                </div>
+                
                 
             </div> 
         
         
         
+            
         
         
         
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                
+            
         </div>
     </div>
     
