@@ -161,7 +161,7 @@ def userHome():
         cursor.execute("select count(post_content) from user_posts where user_id = (%s)", loggedin)
 
         #stores post count in string variable 
-        postCount = str(cursor.fetchone()[0])
+        postCount = cursor.fetchone()
         
         
         #if post count is = to 0 there are no posts to show 
@@ -169,18 +169,20 @@ def userHome():
         #and tries to log in to the application an error is thrown 
         #as it tries to format an empty string variable
         #leaving a user (that has no posts made) unable to log in to the application
-        if postCount == "0":
+        if postCount == 0:
             
             #stores the below string in the var if there are no posts
             postContent = "No Posts Yet!"
         
         #else get all posts made by that user
         else:
-            #get user posts where user_id = loggedin_id
-            cursor.execute("select post_content from user_posts where user_id = (%s)", loggedin)
+            #get user posts where user_id = loggedin_id and  order by decending date_time
+            cursor.execute("select * from user_posts where user_id = (%s) order by date_time desc", loggedin)
 
             #store response from cursor in post variable and format to string
-            postContent = str(cursor.fetchone()[0])
+            postContent = cursor.fetchall()
+            
+            
         
         
         #close db connection 
@@ -189,7 +191,7 @@ def userHome():
         
             
         #render userHome.html template and pass above variables to the template
-        return render_template('userHome.html', user_name = user_name, bio = bio, postContent = postContent)
+        return render_template('userHome.html', user_name = user_name, bio = bio, postContent = postContent, postCount = postCount)
     
     
     else:

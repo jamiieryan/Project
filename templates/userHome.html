@@ -158,17 +158,6 @@
                     
                 </p>
 
-                  <!--
-                <img class="cardImage" src="https://www.askideas.com/media/13/Welcome-And-Enjoy.jpg" style="width:100%;max-height:100%;">
-                  <br><br>
-                <img class="cardImage" src="http://cdn.wallpapersafari.com/74/56/1b94eg.jpg" style="width:100%;max-height:100%;">
-                  <br><br>
-                <img class="cardImage" src="http://www.hdbloggers.net/wp-content/uploads/2016/10/Nature-HD-Widescreen-Picture-Wallpaper.jpg" style="width:100%;max-height:100%;">
-                  <br><br>
-                <img class="cardImage" src="http://cdn.wallpapersafari.com/8/55/QxR79A.jpg" style="width:100%;max-height:100%;">
-                  <br><br>
-                <img class="cardImage" src="http://www.hdbloggers.net/wp-content/uploads/2016/10/Dual-Screen-Monitor-Widescreen-Wallpaper.jpg" style="width:100%;max-height:100%;">
--->
           </div>
              
               
@@ -179,19 +168,14 @@
                 <h2 style="padding-left:5%;padding-top:5%;">About {{user_name}}</h2>
                   <p style="background:;padding:5%;text-align:justify;">
                     {{bio}}
+                      
+                    No bio yet :( 
                   
                   </p>
               </div>
               
               
-            <div style="background:#f2f2f2;box-shadow: 10px 10px 30px #333333;margin-right:;">
-               
-                <h2 style="padding-left:5%;padding-top:5%;">About Jamie</h2>
-                  <p style="background:;padding:5%;text-align:justify;">
-                  
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. 
-                  </p>
-              </div>
+           
               
               
               
@@ -208,7 +192,7 @@
          
          <div class="col-md-6 col-md-offset-0">
             <div style="background:#f2f2f2;box-shadow: 10px 10px 30px #333333;padding:10px;height:250px;">
-               <!--
+              <!-- 
               <form action="userPost()">
                
                 <label style="margin-top:10px;">Say Something...</label> 
@@ -222,10 +206,10 @@
                     Search: <input type="text" name="postContent">
                     <input type="submit" value="post">
                 </form>
-                -->
                 
                 
-                <!--
+                
+                
                 <form method="post" action="/post">
 
                     <textarea name="postContent">This is the value</textarea>
@@ -233,10 +217,10 @@
                 </form>
                 -->
                 <form class="form-signin" action="/userHome" method="post" role="form">
-                     <h2 class="form-signin-heading">Post </h2>
+                     <h2 style="text-align:center;"class="form-signin-heading">Post </h2>
 
                     <input type="text" name="postContent" class="form-control" placeholder="Say Something...">
-                    
+                    <br>
                     <button class="btn btn-lg btn-primary btn-block" type="button">Go! </button>
                  </form>
 
@@ -245,18 +229,11 @@
           </div>
              
               
-              <br>
+             
+             <br>
              
              
-             
-             
-             
-             
-             
-             
-             
-             
-        <div style="background:#f2f2f2;box-shadow: 10px 10px 30px #333333;padding:10px;height:auto;">     
+             <div style="background:#f2f2f2;box-shadow: 10px 10px 30px #333333;padding:10px;height:auto;">     
         <div Class="row" style="padding:10px;height:auto;">
               
           <div class="bar col-md-4">
@@ -283,250 +260,60 @@
 
           </div>
         </div>
-         
-            
-             
-             
              
              <br>
              
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-            <div style="background:#f2f2f2;box-shadow: 10px 10px 30px #333333;padding:10px;height:auto;">
+
+            <div style="background:#f2f2f2;box-shadow: 10px 10px 30px #333333;padding:10px;min-height:50px;">
               
                 
-                
-            <div class="postCard"> 
-                <h3 style="padding:10px;">{{user_name}}</h3>
-                
-                <p style="padding:10px;padding-top:0px;">00:00:00 - 01/01/2016</p>
-                 <p style="padding:10px;padding-top:0px;text-align:justify;">
-                  
-                  {{postContent}}
-                  </p>
-            </div>
-                
+                {% for row in postContent %}    
+                <div class="postCard" style="border-top:2px solid green;box-shadow: 7px 7px 10px #a6a6a6;"> 
+
+                    <h3 style="padding-left:10px;">{{user_name}} Said, </h3>
+
+                    <p style="padding-left:10px;padding-top:0px;">
+                    <b><u>Time: {{row[1]}}</u></b>
+
+                    </p>
+                    <p style="padding:10px;padding-top:0px;text-align:justify;">
+                    {{row[2]}}
+
+                    </p>
+                </div>
+                {% endfor %}    
 
 
           </div>
-              
-              
-           
-              
-              
-              
+ 
          </div>
-          
-         <!--
-        <div class="col-md-6 col-sm-offset-1" style="border:0px solid blue; height:250px;background:#f2f2f2;box-shadow: 10px 10px 30px #333333;margin-bottom:20px;"> 
-            
-            
-           <form action="">
-               
-                <label style="margin-top:20px;">Say Something...</label> 
-               
-                <input type="text" id="text" name="text_name" class="text"/>
-               
-                <input class="post" name="userPost" placeholder="Say Something..." type="submit" value="Submit">
-            </form>
-            
-         </div> 
-         
-         
-          
-        <div class="col-md-6" style="border:0px solid blue; height:1000px;background:#f2f2f2;box-shadow: 10px 10px 30px #333333;">
-                
-            <div style="width:100%;margin-top:2%;height:20%;background:white;">
-                <h2 style="padding:10px;">Name</h2>
-                
-                <p style="padding:10px;">00:00:00 - 01/01/2016</p>
-                 <p style="padding:10px;text-align:justify;">
-                  
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-                  </p>
-            
-            </div>
-            
-            
-            
-            <div style="width:100%;margin-top:2%;height:20%;background:white;">
-            
-            
-            </div>
-            
-            
-         </div>   
-            -->
     </div><!--Close Row-->  
             
             
             
-            
-            
-            
-            
-            
-            
-            
-            
-              <!--
-              <br>
-               <div class="bar col-md-12" style="background:black;">
-                
-                  
-                  <h2>Hello</h2>
-                  
-                  <p style="color:white;padding:10px;text-align:justify;">
-                  
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
-                  </p>
-              </div>
-              
-              
-            
-              <div class="bar col-md-4">
-                <div id="container"></div>
-                  <h1 style="">89%</h1>
-                  
-                  <h2>Hello</h2>
-                  
-                  <p style="background:white;padding:10px;text-align:justify;">
-                  
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
-                  </p>
-              </div>
-              
-              <div class="bar col-md-4">
-                <div id="container2"></div>
-                  <h1 style="">69%</h1>
-                  
-                  <h2>Hello</h2>
-                  
-                  <p style="background:white;padding:10px;text-align:justify;">
-                  
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
-                  </p>
-              </div>
-              
-              <div class="bar col-md-4">
-                <div id="container3"></div>
-                  <h1 style="">75%</h1>
-                  
-                  <h2>Hello</h2>
-                  
-                  <p style="background:white;padding:10px;text-align:justify;">
-                  
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
-                  </p>
-              </div>
-              
-              <div class="bar col-md-12" style="background:black;">
-                
-                  
-                  <h2>Hello</h2>
-                  
-                  <p style="color:white;padding:10px;text-align:justify;">
-                  
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
-                  </p>
-              </div>
-             
-              
-          </div>-->
-        
-        
       
-      
-      
-      
-      
-      
-      
-      
-    <!--  
-    <div class="container" style="margin-left:auto;margin-right:auto;position:relative;border:1px solid green;">
-      <div class="header">
-        <nav>
-          <ul class="nav nav-pills pull-right">
-            <li role="presentation" class="active"><a href="/logout">Logout</a></li>
-          </ul>
-        </nav>
-        <h3 class="text-muted">Data Representation & Querying</h3>
-      </div>
+  <div id="toggle" class="button_container">
+        <span style="background:#99ff33;" class="top"></span>
+        <span style="background:#99ff33;" class="middle"></span>
+        <span style="background:#99ff33;" class="bottom"></span>
+    </div>
 
-      <div class="jumbotron">
-        <h1>Welcome {{name}} !!</h1>
-       
-      </div>
-        
-      <div class="row" style="border:1px solid red;">
-          <div class="col-md-6" style="border:1px solid green; height:30vh;">
-          
-          </div>
-          
-          
-          <div class="col-md-6" style="border:1px solid blue; height:30vh;">
-          
-          </div>
-        
-        
-      </div>
-        
-      <div class="row" style="border:1px solid red;">
-          <div class="col-md-6" style="border:1px solid green; height:30vh;">
-          
-          </div>
-          
-          
-          <div class="col-md-6" style="border:1px solid blue; height:30vh;">
-          
-          </div>
-        
-        
-      </div>
-
-      
-
-      <footer class="footer">
-        <p>&copy; Company 2015</p>
-      </footer>
-
-    </div>-->
-      
-      <div id="toggle" class="button_container">
-            <span style="background:#99ff33;" class="top"></span>
-            <span style="background:#99ff33;" class="middle"></span>
-            <span style="background:#99ff33;" class="bottom"></span>
-        </div>
-
-        <div class="overlay" id="overlay">
-          <nav class="overlay-menu">
-            <ul>
-              <li><a style="color:#99ff33;" href="/userHome">Profile</a></li>
-              <li><a href="/about">About</a></li>
-              <li><a href="/index">Articles</a></li>
-                <li><a href="/logout">Logout</a></li>
-            </ul>
-          </nav>
-        </div>
+    <div class="overlay" id="overlay">
+      <nav class="overlay-menu">
+        <ul>
+          <li><a style="color:#99ff33;" href="/userHome">Profile</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/index">Articles</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+      </nav>
+    </div>
       
       
-      <script type="text/javascript" src="{{ url_for('static', filename='wow.min.js') }}"></script>
-	  <script type="text/javascript" src="{{ url_for('static', filename='jquery.min.js') }}"></script>
-	  
-	  <script type="text/javascript" src="{{ url_for('static', filename='index.js') }}"></script> 
+  <script type="text/javascript" src="{{ url_for('static', filename='wow.min.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='jquery.min.js') }}"></script>
+
+  <script type="text/javascript" src="{{ url_for('static', filename='index.js') }}"></script> 
        
   </body>
 </html>

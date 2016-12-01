@@ -49,6 +49,12 @@
             $("#innerMain").load("/route5",function(){}).hide().delay( 750 ).fadeIn(1250);
 
         });
+          //based on #anchor click
+         $("#a").click(function(){
+
+            location.reload();
+
+        });
     </script>
     <style>
         
@@ -144,7 +150,10 @@
 <body>
     
     
-    
+    <div class="col-md-1">
+        <a id="a"><img src="/static/x.png" style="width:50%;filter: invert(100%);">
+        </a>
+    </div>
     
     
     
